@@ -53,8 +53,8 @@ def plot_feats(ax, feats, mu, sig, class_no):
     ax.grid(True)
 
 def visualize_model(feats_gb, mu_gb, sig_gb, feats_lic, mu_lic, sig_lic):
-    x = np.linspace(0, 1, 100)
-    y = np.linspace(0, 1, 100)
+    x = np.linspace(0, 0.6, 100)
+    y = np.linspace(0.6, 1, 100)
     X, Y = np.meshgrid(x,y)
     XY = np.dstack((X, Y))
     pdf_gb = scipy.stats.multivariate_normal(mean = mu_gb, cov = sig_gb).pdf
